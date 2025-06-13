@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 
-import { EntriesService } from './entries.service';
+import { EntriesService } from './services/entries.service';
 import { CreateEntryDto } from './dto/create-entry.dto';
 import { UpdateEntryDto } from './dto/update-entry.dto';
 
@@ -20,16 +20,16 @@ export class EntriesController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.entriesService.findOne(+id);
+    return this.entriesService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateEntryDto: UpdateEntryDto) {
-    return this.entriesService.update(+id, updateEntryDto);
+    return this.entriesService.update(id, updateEntryDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.entriesService.remove(+id);
+    return this.entriesService.remove(id);
   }
 }

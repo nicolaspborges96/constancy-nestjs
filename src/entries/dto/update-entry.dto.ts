@@ -1,8 +1,3 @@
-import { PartialType } from '@nestjs/mapped-types';
+import { CreateEntryDto } from "./create-entry.dto";
 
-import { CreateEntryDto } from './create-entry.dto';
-
-export class UpdateEntryDto extends PartialType(CreateEntryDto) {
-  completionDate: Date;
-  activityId: string;
-}
+export class UpdateEntryDto extends CreateEntryDto {}
