@@ -1,9 +1,14 @@
 import { Module } from '@nestjs/common';
-import { EntriesService } from './entries.service';
-import { EntriesController } from './entries.controller';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { EntriesService } from './services/entries.service';
+import { EntriesController } from './controllers/entries.controller';
+import { Entry } from './entities/entry.entity';
+import { EntriesRepository } from './repository/entries.repository';
 
 @Module({
+  imports: [TypeOrmModule.forFeature([Entry])],
   controllers: [EntriesController],
-  providers: [EntriesService],
+  providers: [EntriesService, EntriesRepository],
+  exports: [EntriesService]
 })
 export class EntriesModule {}
