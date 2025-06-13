@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+
 import { CreateFrequencyDto } from './dto/create-frequency.dto';
 import { UpdateFrequencyDto } from './dto/update-frequency.dto';
 

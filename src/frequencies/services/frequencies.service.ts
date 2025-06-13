@@ -1,8 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
+
+import { Frequency } from '../entities/frequency.entity';
 import { CreateFrequencyDto } from '../dto/create-frequency.dto';
 import { UpdateFrequencyDto } from '../dto/update-frequency.dto';
 import { FrequenciesRepository } from '../repository/frequencies.repository';
-import { Frequency } from '../entities/frequency.entity';
 
 @Injectable()
 export class FrequenciesService {

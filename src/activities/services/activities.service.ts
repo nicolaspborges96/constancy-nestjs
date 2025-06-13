@@ -1,8 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
+
+import { Activity } from '../entities/activity.entity';
 import { CreateActivityDto } from '../dto/create-activity.dto';
 import { UpdateActivityDto } from '../dto/update-activity.dto';
 import { ActivitiesRepository } from '../repository/activities.repository';
-import { Activity } from '../entities/activity.entity';
 
 @Injectable()
 export class ActivitiesService {

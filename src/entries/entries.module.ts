@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+
+import { Entry } from './entities/entry.entity';
 import { EntriesService } from './services/entries.service';
 import { EntriesController } from './controllers/entries.controller';
-import { Entry } from './entities/entry.entity';
 import { EntriesRepository } from './repository/entries.repository';
 
 @Module({

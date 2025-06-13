@@ -1,14 +1,16 @@
 import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
-import { AppController } from './app.controller';
+import { TypeOrmModule } from '@nestjs/typeorm';
+
 import { AppService } from './app.service';
-import { ActivitiesModule } from './activities/activities.module';
-import { FrequenciesModule } from './frequencies/frequencies.module';
+import { AppController } from './app.controller';
+
+import { Entry } from './entries/entities/entry.entity';
 import { EntriesModule } from './entries/entries.module';
 import { Activity } from './activities/entities/activity.entity';
-import { Entry } from './entries/entities/entry.entity';
+import { ActivitiesModule } from './activities/activities.module';
 import { Frequency } from './frequencies/entities/frequency.entity';
+import { FrequenciesModule } from './frequencies/frequencies.module';
 
 @Module({
   imports: [

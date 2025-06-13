@@ -1,4 +1,5 @@
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+
 import { Activity } from 'src/activities/entities/activity.entity';
 
 @Entity('entries')

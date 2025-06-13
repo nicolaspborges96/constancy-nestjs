@@ -1,7 +1,8 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
-import { ActivitiesService } from '../services/activities.service';
+
 import { CreateActivityDto } from '../dto/create-activity.dto';
 import { UpdateActivityDto } from '../dto/update-activity.dto';
+import { ActivitiesService } from '../services/activities.service';
 
 @Controller('activities')
 export class ActivitiesController {
