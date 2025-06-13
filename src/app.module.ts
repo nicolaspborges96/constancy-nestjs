@@ -2,9 +2,6 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { AppService } from './app.service';
-import { AppController } from './app.controller';
-
 import { Entry } from './entries/entities/entry.entity';
 import { EntriesModule } from './entries/entries.module';
 import { Activity } from './activities/entities/activity.entity';
@@ -30,7 +27,7 @@ import { FrequenciesModule } from './frequencies/frequencies.module';
     FrequenciesModule, 
     EntriesModule
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
